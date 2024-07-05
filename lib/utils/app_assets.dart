@@ -29,9 +29,9 @@ class Assets {
   /// assets/expense_icon.svg
   static const String assetsExpenseIcon = "assets/expense_icon.svg";
 
-  /// Assets for assetsFontsMontserratVariableFontWght
-  /// assets/fonts/Montserrat-VariableFont_wght.ttf
-  static const String assetsFontsMontserratVariableFontWght = "assets/fonts/Montserrat-VariableFont_wght.ttf";
+  /// Assets for assetsFontsMontserratRegular
+  /// assets/fonts/Montserrat-Regular.ttf
+  static const String assetsFontsMontserratRegular = "assets/fonts/Montserrat-Regular.ttf";
 
   /// Assets for assetsIncomeIcon
   /// assets/income_icon.svg
@@ -40,6 +40,14 @@ class Assets {
   /// Assets for assetsInvestmentsIcon
   /// assets/investments_icon.svg
   static const String assetsInvestmentsIcon = "assets/investments_icon.svg";
+
+  /// Assets for assetsLogout
+  /// assets/logout.svg
+  static const String assetsLogout = "assets/logout.svg";
+
+  /// Assets for assetsSetting2
+  /// assets/setting-2.svg
+  static const String assetsSetting2 = "assets/setting-2.svg";
 
   /// Assets for assetsStatisticsIcon
   /// assets/statistics_icon.svg

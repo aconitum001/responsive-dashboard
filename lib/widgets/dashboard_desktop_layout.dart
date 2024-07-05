@@ -10,17 +10,17 @@ class DashboardDesktopLayout extends StatelessWidget {
     return Row(
       children: [
         const Expanded(
-          flex: 1,
+          flex: 2,
           child: CustomDrawer(),
         ),
         Expanded(
-          flex: 3,
+          flex: 5,
           child: Container(
             color: Colors.red,
           ),
         ),
         Expanded(
-          flex: 2,
+          flex: 4,
           child: Container(
             color: Colors.purple,
           ),
