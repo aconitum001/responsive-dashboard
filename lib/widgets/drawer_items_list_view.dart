@@ -38,12 +38,10 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SliverPadding(
       padding: const EdgeInsets.only(left: 8, right: 20),
-      child: ListView.builder(
-        shrinkWrap: true,
+      sliver: SliverList.builder(
         itemCount: items.length,
-        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(

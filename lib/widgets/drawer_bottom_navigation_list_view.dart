@@ -21,12 +21,10 @@ class BottomNavigationListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SliverPadding(
       padding: const EdgeInsets.only(left: 8, bottom: 48, right: 20),
-      child: ListView.builder(
-        shrinkWrap: true,
+      sliver: SliverList.builder(
         itemCount: items.length,
-        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(top: 20),
