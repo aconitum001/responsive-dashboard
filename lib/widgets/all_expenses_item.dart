@@ -10,13 +10,27 @@ class AllExpensesItem extends StatelessWidget {
   });
 
   final AllExpensesModel expensesModel;
-
   final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
-    return isSelected
-        ? ActiveAllExpensesItem(expensesModel: expensesModel)
-        : InActiveAllExpensesItem(expensesModel: expensesModel);
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 300),
+      transitionBuilder: (Widget child, Animation<double> animation) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      },
+      child: isSelected
+          ? ActiveAllExpensesItem(
+              key: ValueKey('active_${expensesModel.title}'),
+              expensesModel: expensesModel,
+            )
+          : InActiveAllExpensesItem(
+              key: ValueKey('inactive_${expensesModel.title}'),
+              expensesModel: expensesModel,
+            ),
+    );
   }
 }

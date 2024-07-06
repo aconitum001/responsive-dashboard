@@ -28,13 +28,16 @@ class AllExpensesItemHeader extends StatelessWidget {
           child: Center(
             child: SvgPicture.asset(
               icon,
-              color: iconcolor,
+              colorFilter: ColorFilter.mode(iconcolor, BlendMode.srcIn),
             ),
           ),
         ),
-        Icon(
-          Icons.keyboard_arrow_right_rounded,
-          color: arrowColor,
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.arrow_forward_ios_rounded,
+            color: iconcolor,
+          ),
         )
       ],
     );
