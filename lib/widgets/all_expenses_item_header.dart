@@ -12,6 +12,7 @@ class AllExpensesItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           width: 60,
@@ -20,7 +21,13 @@ class AllExpensesItemHeader extends StatelessWidget {
             color: Color(0xFFFAFAFA),
             shape: BoxShape.circle,
           ),
-          child: SvgPicture.asset(icon),
+          child: Center(
+            child: SvgPicture.asset(icon),
+          ),
+        ),
+        const Icon(
+          Icons.keyboard_arrow_right_rounded,
+          color: Color(0xff064061),
         )
       ],
     );
