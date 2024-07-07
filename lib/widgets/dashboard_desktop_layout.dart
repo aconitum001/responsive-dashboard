@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
-import 'package:responsive_dashboard/widgets/my_card.dart';
-import 'package:responsive_dashboard/widgets/my_cards_page_view.dart';
+import 'package:responsive_dashboard/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/widgets/primary_dashboard_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -28,8 +27,9 @@ class DashboardDesktopLayout extends StatelessWidget {
             child: CustomBackgroundContainer(
               padding: 24,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  MyCardsPageView(),
+                  MyCardSection(),
                 ],
               ),
             ),
