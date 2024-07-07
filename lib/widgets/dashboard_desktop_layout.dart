@@ -10,6 +10,7 @@ class DashboardDesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Expanded(
           flex: 2,
@@ -19,14 +20,16 @@ class DashboardDesktopLayout extends StatelessWidget {
           flex: 6,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-            child: Column(
-              children: [
-                AllExpenses(),
-                SizedBox(
-                  height: 24,
-                ),
-                QuickInvoice(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  AllExpenses(),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  QuickInvoice(),
+                ],
+              ),
             ),
           ),
         ),
