@@ -4,7 +4,10 @@ import 'package:responsive_dashboard/utils/app_styles.dart';
 class ExpensesMenu extends StatelessWidget {
   const ExpensesMenu({
     super.key,
+    required this.menuItems,
   });
+
+  final List<Map<String, String>> menuItems;
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +46,14 @@ class ExpensesMenu extends StatelessWidget {
           borderSide: const BorderSide(color: Color(0xffF1F1F1)),
         ),
       ),
-      dropdownMenuEntries: const [
-        DropdownMenuEntry(value: "Daily", label: "Daily"),
-        DropdownMenuEntry(value: "Weekly", label: "Weekly"),
-        DropdownMenuEntry(value: "Monthly", label: "Monthly"),
-        DropdownMenuEntry(value: "Yearly", label: "Yearly"),
-      ],
+      dropdownMenuEntries: menuItems.map(
+        (e) {
+          return DropdownMenuEntry(
+            value: e["value"],
+            label: e["label"]!,
+          );
+        },
+      ).toList(),
     );
   }
 }

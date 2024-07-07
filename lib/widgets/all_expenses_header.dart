@@ -7,6 +7,13 @@ class AllExpansesHeader extends StatelessWidget {
     super.key,
   });
 
+  static const List<Map<String, String>> expensesMenuItems = [
+    {"label": "Daily", "value": "Daily"},
+    {"label": "Weekly", "value": "Weekly"},
+    {"label": "Monthly", "value": "Monthy"},
+    {"label": "Yearly", "value": "Yearly"},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return const Row(
@@ -16,7 +23,9 @@ class AllExpansesHeader extends StatelessWidget {
           "All Expenses",
           style: AppStyles.styleSemiBold20,
         ),
-        ExpensesMenu(),
+        ExpensesMenu(
+          menuItems: expensesMenuItems,
+        ),
       ],
     );
   }
