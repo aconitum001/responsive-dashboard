@@ -43,6 +43,10 @@ class Assets {
   static const String assetsFontsMontserratRegular =
       "assets/fonts/Montserrat-Regular.ttf";
 
+  /// Assets for assetsGallery
+  /// assets/gallery.svg
+  static const String assetsGallery = "assets/gallery.svg";
+
   /// Assets for assetsIncomeIcon
   /// assets/income_icon.svg
   static const String assetsIncomeIcon = "assets/income_icon.svg";
