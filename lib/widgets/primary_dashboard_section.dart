@@ -10,7 +10,7 @@ class PrimaryDashBoardSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+      padding: EdgeInsets.only(right: 24, left: 24, top: 24),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -19,6 +19,9 @@ class PrimaryDashBoardSection extends StatelessWidget {
               height: 24,
             ),
             QuickInvoice(),
+            SizedBox(
+              height: 24,
+            )
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
+import 'package:responsive_dashboard/widgets/my_card.dart';
 import 'package:responsive_dashboard/widgets/primary_dashboard_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -7,21 +8,23 @@ class DashboardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Expanded(
+        Expanded(
           flex: 2,
           child: CustomDrawer(),
         ),
-        const Expanded(
+        Expanded(
           flex: 6,
           child: PrimaryDashBoardSection(),
         ),
         Expanded(
           flex: 4,
-          child: Container(
-            color: Colors.purple,
+          child: Column(
+            children: [
+              MyCard(),
+            ],
           ),
         ),
       ],

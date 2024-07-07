@@ -1,6 +1,6 @@
 class Assets {
   Assets._();
-  
+
   /// Assets for assetsAvatar1
   /// assets/avatar_1.svg
   static const String assetsAvatar1 = "assets/avatar_1.svg";
@@ -21,6 +21,10 @@ class Assets {
   /// assets/card_background.svg
   static const String assetsCardBackground = "assets/card_background.svg";
 
+  /// Assets for assetsCardBackground
+  /// assets/card_background.png
+  static const String assetsCardBackground2 = "assets/card_background.png";
+
   /// Assets for assetsDashboardIcon
   /// assets/dashboard_icon.svg
   static const String assetsDashboardIcon = "assets/dashboard_icon.svg";
@@ -29,9 +33,15 @@ class Assets {
   /// assets/expense_icon.svg
   static const String assetsExpenseIcon = "assets/expense_icon.svg";
 
+  /// Assets for assetsFontsMontserratMedium
+  /// assets/fonts/Montserrat-Medium.ttf
+  static const String assetsFontsMontserratMedium =
+      "assets/fonts/Montserrat-Medium.ttf";
+
   /// Assets for assetsFontsMontserratRegular
   /// assets/fonts/Montserrat-Regular.ttf
-  static const String assetsFontsMontserratRegular = "assets/fonts/Montserrat-Regular.ttf";
+  static const String assetsFontsMontserratRegular =
+      "assets/fonts/Montserrat-Regular.ttf";
 
   /// Assets for assetsIncomeIcon
   /// assets/income_icon.svg
@@ -61,4 +71,3 @@ class Assets {
   /// assets/wallet_icon.svg
   static const String assetsWalletIcon = "assets/wallet_icon.svg";
 }
-
