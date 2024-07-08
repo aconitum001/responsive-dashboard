@@ -14,7 +14,7 @@ class ExpensesMenu extends StatelessWidget {
     return DropdownMenu(
       width: 134,
       initialSelection: "Daily",
-      textStyle: AppStyles.styleMedium16,
+      textStyle: AppStyles.styleMedium16(context),
       trailingIcon: const Icon(
         Icons.keyboard_arrow_down_rounded,
         size: 24,

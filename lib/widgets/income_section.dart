@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/widgets/custom_background_container.dart';
-import 'package:responsive_dashboard/widgets/expenses_menu.dart';
+import 'package:responsive_dashboard/widgets/income_header.dart';
+import 'package:responsive_dashboard/widgets/income_section_body.dart';
 
 class IncomeSection extends StatelessWidget {
   const IncomeSection({super.key});
@@ -18,18 +18,11 @@ class IncomeSection extends StatelessWidget {
     return const CustomBackgroundContainer(
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Income",
-                style: AppStyles.styleSemiBold20,
-              ),
-              ExpensesMenu(
-                menuItems: incomeMenuItems,
-              )
-            ],
-          )
+          IncomeHeader(incomeMenuItems: incomeMenuItems),
+          SizedBox(
+            height: 16,
+          ),
+          IncomeSectionBody(),
         ],
       ),
     );

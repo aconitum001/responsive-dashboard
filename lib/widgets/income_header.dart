@@ -2,17 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/widgets/expenses_menu.dart';
 
-class AllExpansesHeader extends StatelessWidget {
-  const AllExpansesHeader({
+class IncomeHeader extends StatelessWidget {
+  const IncomeHeader({
     super.key,
+    required this.incomeMenuItems,
   });
 
-  static const List<Map<String, String>> expensesMenuItems = [
-    {"label": "Daily", "value": "Daily"},
-    {"label": "Weekly", "value": "Weekly"},
-    {"label": "Monthly", "value": "Monthy"},
-    {"label": "Yearly", "value": "Yearly"},
-  ];
+  final List<Map<String, String>> incomeMenuItems;
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +16,11 @@ class AllExpansesHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "All Expenses",
+          "Income",
           style: AppStyles.styleSemiBold20(context),
         ),
-        const ExpensesMenu(
-          menuItems: expensesMenuItems,
+        ExpensesMenu(
+          menuItems: incomeMenuItems,
         ),
       ],
     );
